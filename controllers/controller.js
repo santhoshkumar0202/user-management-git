@@ -24,3 +24,23 @@ exports.userregister=async(req,res)=>{
 }
 
 }
+
+
+exports.userlogin=async(req,res)=>{
+  try{
+let {email,password}=req.body
+
+if(!email || !password){
+  throw new Error("email and password must required")
+}
+
+let reguser=User.findOne({email})
+if(email!==reguser.email && password!==reguser.password){
+throw new Error("username and password is not matching")
+}
+res.status(200).json({userloggedin:"success"})
+  }catch(err){
+console.log("error msg:",err)
+res.status(400).json({loggin:"failed"})
+  }
+}
