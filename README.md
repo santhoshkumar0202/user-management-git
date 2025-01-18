@@ -26,4 +26,4 @@ A RESTful API built with **Express.js** for handling user-related operations suc
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/santhosshkumar0202/user-management-backend.git
+   git clone https://github.com/santhoshkumar0202/user-management-backend.git
