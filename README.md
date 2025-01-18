@@ -6,7 +6,6 @@ A RESTful API built with **Express.js** for handling user-related operations suc
 ## Features
 - **User Registration**: Allows new users to sign up with their credentials (username, email, password).
 - **User Login**: Allows users to authenticate 
-ores passwords by hashing them using bcrypt.
 - **Validation**: Validates user input for registration and login.
 - **Error Handling**: Includes proper error handling for invalid inputs, duplicate entries, and server errors.
 
