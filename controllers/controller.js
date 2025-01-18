@@ -34,8 +34,12 @@ if(!email || !password){
   throw new Error("email and password must required")
 }
 
-let reguser=User.findOne({email})
-if(email!==reguser.email && password!==reguser.password){
+let reguser=await User.findOne({email})
+
+if(!reguser){
+  throw new Error("no user found")
+}
+if( password!==reguser.password){
 throw new Error("username and password is not matching")
 }
 res.status(200).json({userloggedin:"success"})
